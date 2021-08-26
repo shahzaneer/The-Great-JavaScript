@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settimeout cleartime out DOM</title>
+    <style>
+        #test{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Settimeout cleartime out DOM</h1>
+<div id="test"></div>
+     <!--settimeout do args leta hai pehla function name second ms me time ms me diay gye time k bad function aik baar hi chalegaa ager ap chahtay hain aik bhi baar na chalay code k Bawajood tou cleartimeout likhen -->
+    <button onclick="stopanimation()">Stop animation</button>
+    <script>
+     var idd = setTimeout(anim, 3000);
+    //  300 means 1 second   // 
+    function anim(){
+        // console.log("hello");
+        // teen second baad hello console per print hogya aur mehiz aik baar hua serinterval me us time k baad houta rehta tha 
+        var target = document.getElementById("test");
+        target.style.width = "500px";
+        // 3s k baad aik baar width barh gyii
+
+    }
+
+    function stopanimation(){
+        clearTimeout(idd);
+        // aik arg leta hai aur wo settimeout hai 
+
+        // args me jahan function dene hain wahan direct func yani bagair naam k function bbhi deskte hain 
+
+    }
+
+    </script>
+
+</body>
+</html>

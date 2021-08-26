@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       //this function returns the value of first element that passes the test
+       var ages = [10,23,19,45,22];
+       document.write(ages +"<br><br>");
+    //    sbse pehle ages pe find function lagay ga aur uske argument me jo function hai wo call hoga ab chunkay aik array per lgrha hai wo function tou baari baari uske tamaam elements ko check krega find function ;
+       
+
+    // function back calling function
+
+        var b = ages.find(findAdult); 
+        document.write(b +"<br>"); //23 in this case 
+
+        function findAdult(age){
+            return age>=18;
+
+        }
+        
+        var c = ages.findIndex(findAdultIndex);
+        document.write(c); //23 ka index hai 1!
+        function findAdultIndex(ageddddddd){
+           return ageddddddd>=18;
+
+        }
+
+
+   </script> 
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+    <script>
+        let id = Symbol("Hello world");
+        // symbol ki value apne app me hi unique hoti hai
+
+        let id1 = Symbol("Hello world");
+
+        // alert(id.toString());
+        // Cannot convert a Symbol value to a string
+        // at Symbols.html:14 because humne toString func k     bagair use kia 
+
+        // incase ager symbol ki khali value show krwani hai tou description method use hoga
+
+        // alert(id.description);
+
+
+
+        // console.log(id==id1);
+        // false is liay q k symbol apne app me unique hoga!
+
+
+
+        // console.log(id);
+        // console.log(typeof id);
+        // symbol
+
+
+        // symbol usage in object
+        let age = Symbol("age");
+
+        let user = {
+            name : "Shahzaneer Ahmed",
+            class : "BTech",
+            [age] : 25
+            // yun [] me dengay symbol ki value 
+
+        };
+
+        console.log(user);
+        // console.log(user.age) undefine ayega aisay nhi aaskta symbol k case me ; 
+
+        console.log(user[age]);
+        // yn use krna hoga
+
+        console.log(JSON.stringify(user));
+        // yeh tareeka hai object ki value ko json me convert krne ka 
+        // json me symbol ko ignore krdia jata hai 
+
+    </script>
+</head>
+<body>
+    <h1>Symbols</h1>
+</body>
+</html>

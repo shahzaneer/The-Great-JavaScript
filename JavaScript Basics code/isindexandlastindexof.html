@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commentators</title>
+        <script>
+            var a = ["Sanjay manjrekar","Harsha bhosle","Rameez Raja","Nasser hussain","Harsha bhosle"];
+            document.write(a +"<br><br>");
+            var b = a.indexOf("Harsha bhosle"); // yeh name index 2 pe mojud hai second arg me kuch nhi dia yani by default wo zero index se start karega 
+
+            document.write(b+"<br>");
+            var c = a.indexOf("Harsha bhosle", 2);
+            document.write(c+"<br>");
+
+            var d = a.indexOf("Shahzaneer", 2); //jo cheez mojud na ho uske liay yeh -1 return krega !
+            document.write(d + "<br>");
+
+            var k = a.lastIndexOf("Harsha bhosle"); // yeh searching last se satart krta hai tou sbse pehle 4 pe mil jayega usse yeh name
+            document.write(k+ "<br>")
+
+
+
+
+        </script>
+   
+</head>
+<body>
+    
+</body>
+</html>

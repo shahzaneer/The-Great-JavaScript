@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <script>
+        // function *generatorit(){
+        //     console.log("1: message");
+
+        //     yield "yeild 1"
+        //     // yield suspend krta hai rokta hai 
+        //     // iska mtlb hai pause
+
+
+        //     console.log("2: message");
+
+        //     yield "yeild 2"
+        // }
+
+        // let g = generatorit();
+
+        // console.log(g.next());
+        // phli baar likhain gay tou pehle yield se lear last tk ki value suspend hojayegi 
+
+        // ager hum second wali ko use hi nhi krna chahtay tou console.log hatadengay 
+
+
+        // g.next();
+        // console.log(g.next().value);
+        // .value se value .done se status print hojayega
+
+
+
+        // in sb ko ikhattya print krwana ho tou for of loop bhi use hoskta hai 
+
+        // 
+        
+        function *generator(){
+            let numNext = 300;
+            while(true){
+                yield(numNext++);
+
+            }
+        }
+        let g = generator();
+        // console.log(g.next().value); //300
+        // console.log(g.next()); //301
+        // console.log(g.next());
+        // console.log(g.next());
+
+
+        for (let value of g){
+            if(value>305) break;
+            console.log(value);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <h1>Generator</h1>
+    <!-- yeh aik function hai jiske ander likhi hui statement per hamara control houta hai aur hum apni merzi k mutabiq statements ko execute krwaskte hain  -->
+
+</body>
+</html>

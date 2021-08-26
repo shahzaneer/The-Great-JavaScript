@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object literals</title>
+</head>
+<body>
+    <h1>Object literals</h1>
+    <script>
+        
+        let name = "shahzaneer";
+        let course = "BTech";
+
+        // old way to add things in objects
+        // var obj = {
+        //     name:name,
+        //     course,course
+        // };
+
+        // new way to add things in objects
+
+        var obj = {
+            name,course
+        };
+
+        // console.log(obj);
+
+
+        // var n = "name";
+
+        // var obj1 = {
+        //     [n] : "Shahzaneer ahmedi",
+        //     course : "Btech"
+        // };
+        // // [n] se n naami variable me mojud string replace hojayegi hamari key se yeh feature bhi ecma6 ka hai 
+
+
+        // console.log(obj1);
+
+
+
+
+         var n = "name";
+
+        var obj1 = {
+            [n + "of the man"] : "Shahzaneer ahmedi",
+            course : "Btech",
+            
+        };
+        // [n] se n naami variable me mojud string replace hojayegi hamari key se yeh feature bhi ecma6 ka hai is trh hum n k ander mojud value ko change krskte hain ..
+
+
+
+        console.log(obj1);
+        // 
+        var objx = {
+            name : "Shah",
+            sub : "CS",
+            details(){
+                return `${this.name} is a student of ${this.sub}`
+                // ab function k name k baad colon dene ki koi zarurat nhi hai 
+            }
+
+            
+        };
+
+        console.log(objx);
+        console.log(objx.details());
+        // uper walay way k elawa hai aik aur way print krne ka 
+        console.log(objx["details"]());
+        
+
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Str Length</title>
+    <script>
+        var str = "Shahzaneer Ahmed is a Ravian";
+        var str1 = "     Pakistan         "
+
+        var a = str.length;
+        // length 0 se start hogi.
+        var b = str.toLowerCase();
+        var c = str.toUpperCase();
+        var d = str.includes("Ravian");
+        // ager hoga isme Ravian tou true werna false 
+        // yeh hai bhi case sensitive
+        var e = str.startsWith("Shah");
+
+        var f = str.endsWith("Ian");
+        var g = str.search("Ravian");
+        // yeh us substring ka index return krega k wo kahan hai aur ager kuch na milay tou -1 return krega
+
+        var h = str.match(/i/g);
+        // match aik array return krta hai us value ki jo di jaati hai usse wo jitni baar repeat hui hoti hai utni baar hi aata hai array me aur yahan jo search krna houta hai double quotes me nhi krte // k darmiyaan krte hain  g ka mtlb hai globally.
+
+        var i = str.indexOf("is");
+        var j = str.lastIndexOf("a");
+        var k = str.replace("Ravian","Comsian");
+        var l = str1.trim();
+
+
+
+
+
+
+        document.write(a +"<br>");
+        document.write(b+"<br>");
+        document.write(c+"<br>");
+        document.write(d+"<br>");
+        document.write(e+"<br>");
+        document.write(f+"<br>");
+        document.write(g+"<br>");
+        document.write(h+"<br>");
+        document.write(i+"<br>");
+        document.write(j+"<br>");
+        document.write(k+"<br>");
+        // alert(str1+"<br>");
+        // alert(l+"<br>");
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

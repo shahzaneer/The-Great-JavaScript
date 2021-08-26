@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance real life example </title>
+    <script>
+        class employee{
+            constructor(name,age,salary){
+                this.empName = name;
+                this.empAge = age;
+                this.empSalary = salary;
+
+            }
+            info(){
+                document.write(`<h1>Employee class</h1>
+                                 Name : ${this.empName}
+                                 Age  : ${this.empAge}
+                                 salary : ${this.empSalary} <br>`);
+            }
+        }
+
+        class manager extends employee{
+            info(){
+                let ta = 1000;
+                let pa = 300;
+                let totalSalary = ta + pa + this.empSalary;
+
+                document.write(`<h1>Manager class</h1>
+                                 Name : ${this.empName}
+                                 Age  : ${this.empAge}
+                                 salary : ${totalSalary} <br>`);
+
+            }
+        }
+
+        let a = new manager("Shahzaneer ahmed",19,20000);
+        let b = new employee("John Smith",20,15000);
+
+        a.info();
+        b.info();
+        
+
+    </script>
+</head>
+<body>
+    <h1>Inheritance real life example </h1>
+</body>
+</html>

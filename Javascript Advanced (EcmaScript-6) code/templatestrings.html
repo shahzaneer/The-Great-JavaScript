@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template string</title>
+</head>
+<body>
+    <h1>template string</h1>
+    <script>
+        // let user = "yahoo baba";
+        // let name = "shah"
+        // document.write("hello<br>" + user + "good" +name);
+        // yeh way hai normal jo kaafi mushkil hojata hai 
+
+        // string template
+
+        let a = "shah";
+        let b = "zaneer";
+        c = " ahmed";
+
+        // document.write(`hello there ${a}${b} ${c} welcome on board yahan hum fuction ko bhi krskte hain call ${fullname(firstName,lastName)}` );
+        // yeh symbol backpick hai ..
+        // isme hum single double quotes dono use krstke hain
+
+        // yeh spacing ko bhi consider krta hai console me ... document me wesa hi likhega 
+
+
+        let firstName = "shahzaneer";
+        let lastName = "Ahmed";
+
+
+        function fullname(firstName,lastName){
+            return `hello "${firstName} ${lastName}" at 'GCU Lahore'`;
+        }
+
+        fullname(firstName,lastName);
+
+
+        document.write(`hello there ${a}${b} ${c} welcome on board yahan hum fuction ko bhi krskte hain call ${fullname(firstName,lastName)}` );
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM insert adjacent</title>
+    <style>
+        #shah{
+            width: 70vw;
+            height: 40vh;
+            background-color: royalblue;
+            border: 2px solid black;
+            margin: 60px;
+            padding: 25px;
+            box-sizing: border-box;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create and append insertAdjacent</h1>
+
+    <div id="shah">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ullam esse voluptates iusto, eum officia similique quidem officiis, cum totam odio non?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate nam eos temporibus magni iste harum dolor omnis consequatur eum libero consequuntur qui, officia dignissimos alias modi facilis fuga cumque obcaecati, veritatis, saepe optio? Aut at iure minus pariatur expedita corporis, fugiat culpa ab in cumque quam doloribus aspernatur velit ad.
+
+    </div>
+
+    <script>
+        // insert adjacent
+        // insertAdjacentElement
+
+        var newElement = document.createElement("h2");
+        // tag create kia 
+
+        var newText = document.createTextNode("Ravian | Comsian");
+        // text create kia 
+
+
+        newElement.appendChild(newText);
+        // yeh humne h2 ko text se link krne k liay kia hai
+
+
+        var target = document.getElementById("shah");
+        // target k liay likha 
+
+        // target.insertAdjacentElement("beforebegin", newElement);
+        // jo bhi target hai usme insert kro beforebegin position me newElement ko 
+        // pehla arg jo hai wo position hai  k kahan aana chahiay aur dusra hai k kisme add krna hai 
+        // target.insertAdjacentElement("afterbegin", newElement);
+        // ab yeh element k ander aagya
+
+
+        // insertAdjacentHTML
+
+        var newElement1  = "<h2>This is Heading</h2>";
+        // yeh html tag lia hai .. is trh direct html tag add kr skte hain 
+
+        // target.insertAdjacentHTML("afterend", newElement1);
+        // target.insertAdjacentHTML("beforeend", newElement1);
+        // yahan bhi pehla position hai aur doosra wo cheez hai jisse add krna hai 
+
+
+
+        // insertAdjacentText
+
+        var newText1 = "This is a text node";
+        // text var lia 
+        target.insertAdjacentText("afterend",newText1);
+        // target me direct newtext1 append hogya given position per
+        
+        // yeh hamari lines bachata hai 
+
+        // console elemenet per jaker bhi dekh skte hain hum k kese krte hain yeh kaam 
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+   
+</body>
+</html>

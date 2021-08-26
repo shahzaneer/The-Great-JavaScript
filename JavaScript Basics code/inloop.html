@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/in loop </title>
+    <script>
+        var obj = {
+            firstName : "Shahzaneer",
+            LastName : "Ahmed",
+            Email : "shahism01@gmail.com"
+        };
+
+        // for (var key in obj) {
+        //     document.write(obj[key] + "<br>");
+        //  tou mandarja bala tareekaykaar se humne kiay hain values ko print
+        // key jo hai wo string hai yeh yaad rkhna hai yahan
+        // dono yani keys aur values ko ikhatta print krna bhi mumkinaat me se hai!
+
+        for (var key in obj) {
+            document.write( key +" : "+obj[key] + "<br>");
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

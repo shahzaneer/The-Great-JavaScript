@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ages = [19,19,100,188,18,20];
+        document.write(ages+ "<br>")
+        //some check krte huay dekhta hai k agger aik bhi value satisfy kr rhi hai condition ko tou true return krdeta hai jbke every jbtk tamaam element condtion ko satisfy na krdein true return krne ki zehmat se mehroom rehta hai 
+
+        //some --> koi aik bhi satisfy krde tou maanjata yani T deta 
+        // every --> jb tk saaray na maanay yeh nhi maanta! 
+        
+        // yahan bhi function backcalling ka concept use hota hai a function used passes a arg that is itself a function !
+
+       // var n=ages.some(checkAdult);
+       var m=ages.every(checkAdult);
+        document.write(m+"<br>")
+        function checkAdult(age){
+            return age>=18;
+         }
+    </script>
+</body>
+</html>

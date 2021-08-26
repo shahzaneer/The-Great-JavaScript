@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers Methods</title>
+
+    <script>
+        var a = "99";
+        var b = true;
+        var c = Number(b);
+        var d = "99 89";
+        var isf = 1200;
+
+        var k = Number.isFinite(isf);
+        // isfinite boolean return krega finite hoga tou true werna false 
+        // isIntteger T ya F return krta hai ...
+
+        document.write(k);
+
+
+
+        var num = Number(a);
+
+        document.write(typeof a);
+        document.write(a+10);
+        document.write(typeof num);
+        document.write(c);
+        // true ka numerical equivalent 1 k equal aata hai 
+        
+        var e = parseInt(d);
+        // parse int sbse pehla integer dekhayga jo string me hoga usse return krega ager na hua tou NaN return krega meaning not a number 
+        // parse float bhi same hi hai bs difference yeh hai k yeh float dhoondayga!
+
+        document.write(e);
+
+        document.write("<br>");
+        var n = 5.78976;
+
+        var num1 = n.toFixed(2);
+        // tofixed k jo argument me number dia jayega utni values ko determine krle ga aur utni hi decimals k saath asa string return karega
+        // precision round about value dega hamain whole value ki aur jo arg me digit dengay utne digits tk karega yeh precision
+
+        document.write(num1);
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

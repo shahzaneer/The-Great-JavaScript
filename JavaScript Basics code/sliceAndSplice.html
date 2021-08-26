@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a=[1,2,3,4,5,6,7,8];
+        var b=a.slice(0,4);
+        // slice ka maqsad hai aik array ka aik slice first arg starting index aur second arg ending index 
+        document.write(b);
+        // // negative indexes bhi use hosktay hain concept is just like python!
+        var d = ["sanjay","Aman","Rehman","Rahul"];
+
+        document.write(d+"<br><br>")
+        // splice existing array me change krta hai tou iske liay alag se variable declare krne ki zarurat nhi hai 
+
+
+        d.splice(2,0,"Neha","Karan");
+        // do index per jao wahan se 0 values hatao (yani yahan kuch na hatao) aur is index per insert kro neha aur karan ko --> yeh hai splice 
+        // yahan 2nd arg me 0 dia hai tou original a me jo 2 pe tha usse delete nhi kia gya 1 dia jaye tou original a me 2 per mojud aik cheez delete hogi 2 dia jaye tou 2 samait aik aur cheez delete hogi 
+        // bit confusing concept xD
+        // mehiz values ko delete krne k liay bhi use hoskta hai yeh 
+        // document.write(a.splice(2,2));
+
+        document.write(d+"<br><br>")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

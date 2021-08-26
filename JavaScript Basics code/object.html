@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object data type </title>
+</head>
+<body>
+    <script>
+    var a = {
+        fname : "Shahzaneer",
+        sname : "Ahmed",
+        age : "18",
+        college: "GCU Lahore",
+        percentageBise: [96,90],
+
+        salary :function(){
+            return 990000000;
+        },
+        fullname :function(){
+            return this.fname + " " +this.sname;
+        },
+        living : {
+            city : "Lahore",
+            country : "Pakistan"
+        }
+
+    };
+
+       // document.write(a); // issse object object likha ayega mehiz 
+       //alag alag albatta print kia jaskta hai jiska tareeka mandarja zail hai ;
+    //    yani object k name ko use krte huay uske elements ko access krskte hain 
+       document.write(a.fname);
+       document.write(a.sname);
+       document.write(a.age);
+       document.write(a.college);
+        console.log(a);
+        console.log(a.fname);
+        document.write(a.percentageBise);
+</script>
+</body>
+</html>

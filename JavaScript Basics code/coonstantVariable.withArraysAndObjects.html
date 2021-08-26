@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constant Variable with arrays and objects</title>
+    <script>
+        const a = 20;
+        // a = 30;
+        // it will throw error..
+        
+        const b = [1,2,3];
+
+        b[0] = 25;
+        // mandarja bala tareekayqaar se list me mojud values ko change kia jaskta hai lekin aik mukammal array ko change nhi kia jaskta
+
+        console.log(b);
+
+        const o = {
+            name : "Shah",
+            age : 19
+        };
+
+        o.name = "Iqbal";
+
+        console.log(o);
+        // object me bhi yunhi houta hai read above comment!
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

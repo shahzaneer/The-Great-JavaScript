@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval clear interval DOM fucntions</title>
+    <style>
+        #test{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Set interval clear interval DOM fucntions</h1>
+
+    <div id="test"></div>
+<script>
+    // serInterval aur clearinterval use hote hain animations ko defin krne k liay in js 
+    var id = setInterval(animm ,500);
+    // pehla arg function hai jo call krna hai aur dusra milliseconds me time hai k kitne time baad function call hojaye 1000ms = 1 sec
+    var a = 0;
+    function animm(){
+
+        a= a+10;
+
+        if (a==200){
+            clearInterval(id);
+            // classinterval --> rok deta hai animation ko aur iske arg me wo jo serIntervsl call kia houta hai wo houta hai 
+        }
+        else{
+        var target = document.getElementById("test");
+
+        target.style.marginLeft = a+ "px";
+    }
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

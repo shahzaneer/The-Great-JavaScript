@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance IN js </title>
+    <script>
+        class employee{
+            constructor(name){
+                this.Ename = name;
+                console.log("Im constructor");
+
+
+            }
+
+            info(){
+                console.log("Info func: employee name is "+this.Ename);
+            }
+        }
+        
+        class manager extends employee{
+            constructor(){
+                super();
+                console.log("Im constructor of child class");
+            }
+
+
+        }
+        let a = new manager("Shahzaneer ahmed");
+        a.info();
+
+
+        // class manager child hai employee ki tou manager ka object bananay se employee ki properties aur methods call hopayengay 
+        // ager dono classes me consturtor ho tou pehle har soorat parent class/super class ka constructor call hona chahiay werna error through hoga
+
+        // Must call super constructor in derived class before accessing 'this' or returning from derived constructor
+        // at new manager
+        // isko hal krne k liay child k constructor se pehle super methods use krte hain jo parent k constructor ko automatically call krdeta hai 
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Inheritance In js </h1>
+
+
+
+
+</body>
+</html>

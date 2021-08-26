@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+    <script>
+        // rest operator function declare krte huay use houta hai aur spread operator houta hai use call krte huay , spread operaotr use houta hai arrays k case me 
+
+
+        // ager hum ...args(jo hamara rest operator hain usme aik array pass krna chahain tou n hogi aisay uske liay hamay function call krtay huay call krna hoga ...args(name) jo spread operatpor hai )
+
+
+
+
+        function sum(name,...args){
+
+           
+            
+            document.write(`Hello ${name}  <br>`);
+            
+            let sum = 0;
+            for(let i in args){
+
+                sum += args[i];
+               
+            }
+            
+           
+            document.write(sum);
+            
+
+        }
+
+        var arr = [10,20,30,40];
+
+        sum("shahzaneer ahmed",...arr);
+        // yun spread operator k use se hum dono se kaam leskte hain 
+
+        // sum(20,30,40);
+        // sum(20,30);
+        // sum("shahzaneer ahmed","BCS",20,30,10);
+        // sum("iqbal azeem","MA Urdu",70,30);
+
+
+
+
+        // ...name spread operator array ko elements me convert krdeta hai 
+
+        var k = [100,200,300];
+
+        console.log(...k);
+        // yeh ... k saath alag alag values bn gyi hain aur iske bagair array hi hain 
+
+
+
+        var arr1 = [1,2,3,4,5];
+
+        // var arr2 = arr1;
+        var arr2 = [...arr1];
+        // iska mtlb hai k arr1 k elements copy kro aur unki aik array arr2 me safe krdo 
+        arr1.push(6);
+
+        console.log(arr2);
+        // (6) [1, 2, 3, 4, 5, 6]0: 11: 22: 33: 44: 55: 6length: 6[[Prototype]]: Array(0)
+        // simple array ko copy krengay aur baad me add krengay usme kuch tou copied array me bhi add hojayega wo sb 
+
+        // lekin spread operator ki madad se krengay tou sb sahi rahega 
+
+        // hum concatination bhi krskte hain .. is spread methdo k through
+        
+        var a1 = [1,2,3,4];
+        var a2 = [5,7];
+
+        var a3 = [...a1,6,...a2]
+
+        console.log(a3);
+
+        // objects k saath bhi use krskte hain 
+
+        var obj1 = {
+
+            name:"Shahzaneer "
+
+        };
+        var obj2 ={
+            age: 18
+        };
+
+
+        var obj3 = {
+            ...obj1,...obj2
+        };
+        // dono a=object ko aik object me convert krdia gya hai 
+        
+
+        console.log(obj3);
+
+
+       
+
+
+    </script>
+</head>
+<body>
+    <h1>spread operator</h1>
+</body>
+</html>

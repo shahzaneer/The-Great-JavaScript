@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open and close method windows method</title>
+</head>
+<body>
+    <h1>Open and close method windows method</h1>
+    <button onclick="openWindow()">open window</button>
+    <button onclick="closeWindow()"> Close Window</button>
+
+
+    <script>
+        var myWindow;
+        // yeh global variable hai ..
+
+        function openWindow(){
+            // jb myWindow ko yahan istemal kia tou yahan iski value ko assign krne k liay global nhi likhna tha ??
+
+           myWindow = window.open("http://digiskills.pk","","width=500px,height=200px,left=100p,top=200pxx");
+
+            // teen parameters hain iske first one is url second one is name third one specs yaani width aur height  normally srff aik hi use houta hai 
+            // _[parent krne per issi parent windolw me on hogyi hai site
+
+        }
+
+        function closeWindow(){
+            // yahan access krlia hai issse .
+            myWindow.close();
+        }
+    </script>
+</body>
+</html>

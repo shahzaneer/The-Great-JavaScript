@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.all </title>
+
+    <script>
+        // // aik se zyada promises hon tou use kia jata hai promise.all ..
+
+        // // pehla promise
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() =>{
+        //         console.log("the first message has been resolved");
+        //     },1*1000);
+        //     resolve(10);
+
+        // });
+
+        // // dusra promisie
+        // let p2 = new Promise((resolve, reject) => {
+        //     setTimeout(() =>{
+        //         console.log("the second message has been resolved");
+        //     },2*1000);
+        //     resolve(20);
+            
+        // });
+
+        // // teesra promise
+        // let p3 = new Promise((resolve, reject) => {
+        //     setTimeout(() =>{
+        //         console.log("the third message has been resolved");
+        //     },3*1000);
+        //     resolve(30);
+            
+        // });
+
+        // // then aur catch function ka usage
+
+        // Promise.all([p1,p2,p3]).then((result) => {
+        //     console.log(`Results : ${result}`);
+        // }).catch((error) => {
+        //     console.log(`Result : ${error}`);
+        // });
+
+        // catch tb chalta hai jb in tamaam promises me se koi aik bhi reject hojaye 
+
+        // then tb chalta hai jb yeh taam promises resolve hojatay hain aik bhi ager unresolve hua tou then na chalay ga 
+
+
+
+        // another way 
+        // ikhattay hi taam promises define krdiay hain promises k ander aik function houta hai jiske ander do parameters houte hain wo dediay hain jo function hmne lia hai usko define krlete hain 
+
+       
+
+        let promiseCall = function(returnData, message){
+            return function(resolve, reject){
+                setTimeout(() =>{
+                console.log(`${message}`);
+                resolve(returnData);
+                
+            }, returnData*100);
+
+            }
+          
+         };
+         
+         
+        let p1 = new Promise(promiseCall(10,"first"));
+        let p2 = new Promise(promiseCall(20,"second"));
+        let p3 = new Promise(promiseCall(10,"third"));
+
+
+        Promise.all([p1,p2,p3]).then((result) => {
+            console.log(`Results : ${result}`);
+        }).catch((error) => {
+            console.log(`Result : ${error}`);
+        });
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Promise.all </h1>
+</body>
+</html>

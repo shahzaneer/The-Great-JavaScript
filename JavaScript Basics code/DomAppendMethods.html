@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom append methods</title>
+    
+    <style>
+        #s{
+            width: 500px;
+            height: 250px;
+            background-color: rgb(206, 206, 71);
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>DOM Append Methods</h1>
+<div id="s">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, consectetur qui eligendi omnis animi laborum molestias! Quibusdam voluptas a cupiditate ab doloremque?</p>
+
+    <script>
+        newElement =  document.createElement("p");
+        // p banaya using js
+        newText = document.createTextNode("This is shahzaneer ahmed");
+        // text banaya using js
+ 
+        newElement.appendChild(newText);
+        // p aur text link kiay 
+ 
+        // document.getElementById("s").appendChild(newElement);
+        // ab s id walay div me newElement ko append krdia aur yeh ab visible hai site per yeh last me append houta hai append ka mtlb hai last me jurna pehle saray tags aayengay predefined walay phir aayegi iski baari ager hum pehle insert krna chahtay hain tou uski liay insertBefore naami aik func hai 
+
+        // var comment = document.createComment("sp21-bcs-087");
+        // document.getElementById("s").appendChild(comment);
+        // comment bhi last me chala gya ab ager hum isse kisi cheez
+
+ 
+        // console.log(newElement);
+     //    console.log(newText);
+
+        var target = document.getElementById("s")
+
+        document.getElementById("s").insertBefore(newElement,target.childNodes[0]);
+        // pehla arg hai k kis cheez ko insert krna hai apne dusra hai k kis cheez se pehle krna hai insert ab yeh pehle aagya hai insert kr k 
+ 
+     </script>
+
+</div>    
+</body>
+</html>

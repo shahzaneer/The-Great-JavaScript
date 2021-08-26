@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterators</title>
+
+    <script>
+
+        let numbers = [100,200,300,400,500,600,700,800,900];
+
+        // console.log(typeof numbers[Symbol.iterator]);
+        // function hai yeh 
+
+        let iter = numbers[Symbol.iterator]();
+
+        // iter.next();
+        // first value ayeegi yahan aur done me jbtk false ayega jbtk saari values khtm nhi hojaatin
+        
+        // console.log(iter.next());
+        // // 200 
+        // console.log(iter.next().value);
+        // console.log(iter.next().done);
+        // yun inki properties bhi hoskti hain 
+        // 300 last walay me bhi done flase hi ayega
+        // console.log(iter.next());
+        // yahan undefine aur done true hogya k ab aagay koi value mojud nhi hai 
+
+        // isme pura control hamaray pas houta hai for instance ager me chahun k iski pehli value ko hata dun tou simple console.log ko hatadunga that's all
+
+        // issi trh hum kisi bhi trh control hasil krna chatay hain krskte hain  bs call krna hai 
+
+        // jb hmne aik saath hi saari values print krwaani hon 
+
+        let result = iter.next();
+        // result me value safe hai first wali 
+
+        while(!result.done){
+            // jbtk result ka done jo k initially false hai
+            // true na hojaye tb tk loop chalay  
+
+            console.log(result.value);
+            //printing
+            result = iter.next();
+            //increment/decrement/value setter
+            //yahan iter ki ab jo next value hogi set krdi 
+            // jb tk true nhi hojata tou yeh kaam chalta rahega
+        }
+
+
+
+
+
+
+
+        
+    </script>
+</head>
+<body>
+    <h1>Iterators</h1>
+    <!-- yeh loops wala kaam krte hain lekin yahan main control hamaray pas houta hai yani koi cheez omit krni ho tou wo assaani se hoskti hai loops se krengya tou if conditions likhni hongi -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hasAttribute</title>
+    <style>
+        #test{
+            background-color: aquamarine;
+            border: 1px solid black;
+            width: 500px;
+            height: 250px;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>has attribute has child nodes</h1>
+    <div id="test" class="funk">
+
+    </div>
+
+    <script>
+        var target = document.getElementById("test");
+
+        var attr = target.hasAttribute("class");
+
+        console.log(attr);
+        // yeh bool return karega ager id hogi tou true werna false attribute srff attribute dekhta hai value ho na ho koi farq nhi perta 
+
+
+        var find = target.hasChildNodes();
+        // koi child hoga tou true werna false .. koi tag ho na ho soace bhi khali ho tou yeh usse consider krlega aur true return krdega 
+        
+        console.log(find);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>types of variables var let const</title>
+</head>
+<body>
+    <h1>types of variables var let const</h1>
+
+    <script>
+        var a = "Hello";
+        var a = "shahzaneer ahmed ";
+        
+        // var reassing and re declare hojata hai 
+        // console.log(a);
+
+        let b = "hello";
+
+        b = "shahzaneer";
+
+        // let b = "shahzaneer";
+        // Uncaught SyntaxError: Identifier 'b' has already been declared
+        // yeh declare na hoga 
+        // albatta reassign hojayega 
+        // console.log(b);
+
+
+        const d = "hell-fire";
+        // const d = "shah";
+        // Uncaught SyntaxError: Identifier 'd' has already been declared
+        // d = "shahzaneer ahmed ";
+        // typesofVariables.html:33 Uncaught TypeError: Assignment to constant variable.
+
+        // al mukhtasar yeh na tou reassign hogi na hi redeclare 
+
+
+
+        // -----scope scenez ----
+
+        if (1==1){
+            // var a = "hello"
+            // let z = "hello"
+            const z = "hello";
+            console.log(z);
+        }
+        // console.log(z);
+        // var ki scope hai global isi liay yahan horha hai show 
+
+        // let ---and ----const
+        // typesofVariables.html:46 Uncaught ReferenceError: z is not defined
+
+        // yeh dono block ko follow krte hain tou yeh yun hoga 
+
+        
+
+
+        
+    </script>
+</body>
+</html>

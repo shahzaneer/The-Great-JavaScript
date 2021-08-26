@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+    <script>
+        // try catch method --> error ko handle krne k liay use hota hai try me jo bhi code likhengay wo hoga for instance ager koi code error through kr gya tou catch method me likha gya code execute hojayega
+        // try catch in java and try except exception in python jesa concept hai yeh 
+        try{
+            console.log("Start of try");
+            blablaaablaaa; //yeh error h
+            // aik single line me bhi error aajaye tou catch call hojayega aur try ki baki lines nhi chalengi 
+            console.log("end of try ");
+
+
+        }
+        catch(error){
+            // yeh except exception as f ki trh hai yahan error variable me jo bhi error occur hua hoga wo aajayega jisko hum print kr k idea leskte hain 
+            console.log(error);
+            console.log("the error has occured");
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Error Handling</h1>
+</body>
+</html>

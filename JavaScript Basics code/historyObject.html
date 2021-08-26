@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History object </title>
+</head>
+<body>
+    <h1>History object </h1>
+
+    <button onclick="backward()">backward</button>
+    <button onclick="forward()">forward</button>
+    <button onclick="gofunc()">Gobutton</button>
+<script>
+    function backward(){
+        history.back();
+        // backward page me jayega 
+    }
+    function forward(){
+        history.forward();
+        // forward page me jayega
+    }
+    function gofunc(){
+        history.go(2);
+    }
+
+</script>
+</body>
+</html>

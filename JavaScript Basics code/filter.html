@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ages = [1,2,33,4,5,18,19];
+        document.write(ages +"<br>");
+        // aik new variable me ages naami array per dot operator use krte huay filter function lagaana hai jo argument me bhi aik function leta hai 
+        var b = ages.filter(checkAdult);
+        document.write(b +"<br><br>" ); //will return a list consisting of elements that satisfy the function 'checkAdult'.. 33,18,19 in this case;
+
+        function checkAdult(age){
+            // is k parameter me jo age lia gaya hai yahan ages me mojud values aik aik kr k khud aajayengi!
+           return age>=18;
+        }
+
+    </script>
+</body>
+</html>

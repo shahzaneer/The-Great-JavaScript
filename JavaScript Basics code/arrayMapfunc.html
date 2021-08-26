@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function Map() </title>
+    <script>
+
+      var ary1 = [
+          {fname : "Shah" , lname : "zaneer" },
+          {fname : "Iqbal" , lname : "Azeem" },
+          {fname : "Ahmed" , lname : "Raza" }
+      ];  
+      var ary = [11,4,9,16,4]
+      
+      b =ary.map(test);
+
+      function test1(y){
+          return y.fname +" "+ y.lname
+      }
+
+      b1 = ary1.map(test1);
+
+
+      function test(x){
+        return x*10;
+
+      }
+
+      document.write( b + '<br>');
+      document.write(b1);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

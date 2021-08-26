@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+    <script>
+        // syncronously  nhi chalta hai try catch yeh set time out function per sahi trh kaam na karega
+
+        // try{
+        //     setTimeout(function(){
+        //         blablaa;
+        //         // yeh is trh k case me nhi chalega q k yeh sbse pehle try me ayega aur set timout ,e jayega jo aik sec baad chalna hai tou yeh wait kiay bagair neechay chala jayega 
+        //         // aur yun error koi identify krna possible nhi hoga 
+
+        //     },1000)
+        // }
+
+        // catch(error){
+        //     // console.log(error);
+        //     console.log("the error has occured")
+        //     // yeh catch me nhi gya .
+            
+        // }
+
+        // yeh masla hal krne k liay ap try catch ka code settime out func k ander likhskte hain tb yeh chalega 
+
+        try{
+            blabla;
+        }
+        catch(error){
+            // console.log(error.name);
+            // console.log(error.message);
+            // console.log(error.stack);
+
+            // alag alag errors k liay alag alag code likhskte hain 
+
+            if(error instanceof ReferenceError){
+                console.log("Reference error !");
+            }else if (error instanceof TypeError){
+                console.log("type error !")
+            }
+            else{
+                console.log("unknown error ");
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>try catch</h1>
+</body>
+</html>

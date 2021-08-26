@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+    <script>
+        function sum(name,course,...args){
+            // rest operator ko hamesha last me daalna houta hai isse first me nhi daal skte na hi isse hum beech me daal skte hain yeh hamesha last hoga 
+            document.write(`Hello ${name} of ${course} <br>`);
+            // console.log(arguments);
+            // ispoer args ko print krdega args jo bhi hum pass krengay usse consider krega explicitly 
+
+            let sum = 0;
+            for(let i in args){
+
+                sum += args[i];
+               
+            }
+            document.write(sum);
+        }
+        sum(20,30,40);
+        sum(20,30);
+        sum("shahzaneer ahmed","BCS",20,30,10);
+        sum("iqbal azeem","MA Urdu",70,30);
+        // ager hum chahtay hain k variable arg den aur unme aik string den aur sum khali numbers ka krne string ka nhi tou is k liay use hoga rest operator iske bagair sum kuch yun hojaye ga 
+
+        // shahzaneer ahmed203010
+
+        // rest operator ...args(name) ki trh dia jayega functions k arg me 
+        // ager string ko bhi print krna ho tou usko loop se bahir deker kaaam krskte hain 
+
+    </script>
+</head>
+<body>
+    <h1>Rest Operator</h1>
+    
+</body>
+</html>

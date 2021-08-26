@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+</head>
+<body>
+    <h1>ajax </h1>
+    <!-- ajax web pages ko fast krne k liay use ki janay wali technique hai jb hm chahtay hain k kisi makhssos hissay me content refresh ho aur pura page dubaara se load na ho tou hum is technique ko use krte hain
+        bagair page ko refresh kiay kaam hua hai  .. -->
+
+    <p id="demo"Here we will load data !></p>
+
+    <button onclick="loadData()"> click</button>
+    <!-- jb hum button ko click karengay tou yeh function call hojayega -->
+
+
+    <script>
+        function loadData(){
+            // is function me humne apna ajax technique wala code likhna hai 
+
+            var xhttp = new XMLHttpRequest();
+            // sbse pehle humne XMLHtppRequest wali class k liay aik object banan hai yahan hmne xhttp liah hai 
+
+            xhttp.onreadystatechange = function(){
+                // yeh function check krne k liay banaya hai  k readystate 4 hojaye aur status 200 ho tou khud print krde console per 
+
+                if(this.readyState == 4 && this.status == 200){
+                    console.log(this.responseText);
+                    document.getElementById("demo").innerHTML = this.responseText;
+                    // yun kisi bhi file ka data hum server se lekr parh skte hain 
+                }
+
+                else if (this.readyState == 4 && this.status == 404){
+                    console.log("Data not found");
+                }
+            };
+            // open method pehle use houta hai isme teen arguments hain pehla hai method k get ya post krna hai second hai k us file ka path jisse get krna hai , third hai asynchronous hona chahiay ya sync , true krengay tou synx hoga aur aagay wala code bhi bagair rukay chalega aur ager false krengay tou agay wala code bamuhskil chalay ga .
+            // xhttp.open('GET',"txtfile/readme.txt",true);
+
+            // fake json data dekhne k liay : 
+            xhttp.open('GET',"https://jsonplaceholder.typicode.com/posts",true);
+            // open krne k baad send krte hain by send method
+            xhttp.send();
+
+
+        }
+
+        // network option me hamain ajax k through get ki gyi file ki detail mil jayegi
+    </script>
+
+
+</body>
+</html>

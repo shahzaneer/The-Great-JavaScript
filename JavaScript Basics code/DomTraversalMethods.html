@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traversal Methods</title>
+    <style>
+        body{
+            font-size: 14px;
+        }
+        h1{
+            padding: 0;
+            margin: 0;
+        }
+
+    #outer{
+        width: 100%;
+        height: 50%;
+        border: 1px solid black;
+        background-color: fuchsia;
+        /* text-align: center; */
+      
+        
+
+    }
+    #inner{
+        width: 80%;
+        height: 3rem;
+        border: 1px solid transparent;
+        background-color: yellow;
+        margin: 71px;
+        padding: 114px;
+        box-sizing: border-box;
+        
+
+        
+        
+
+
+    }
+    #inner div{
+        border: 1px solid black;
+        width: 70px;
+        height: 50px;
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        text-align: center;
+        /* block-size: 50px; */
+        
+
+        
+
+
+
+        
+
+
+        background-color: grey;
+    }
+   
+   
+    </style>
+
+</head>
+<body>
+    <div id="outer">
+        <h2>Outer</h2>
+
+        <div id="inner">
+            
+            <h2>Inner</h2>
+
+            <div>A</div>
+            <div>B</div>
+            <div id="id-C">C</div>
+            <div id="d">D</div>
+            
+       
+        </div>
+    </div>
+</body>
+<script>
+    var a;
+    // parentElement
+//    a = document.getElementById("inner").parentElement;
+//    outer div ko return kr rha hai yani outer parent hai innner ka 
+// a = document.getElementById("outer").parentElement;
+// body hai outer ka parent!
+// a = document.body.parentElement;
+// body ka parent hai html ; aur html se bara koi baap nhi hai yahan !😃
+
+// isko hum set bhi krskte hain 
+
+// document.getElementById("inner").parentElement.style.backgroundColor = "green";
+// is trh humne change krdia bg clor green me
+
+// document.getElementById("id-C").parentElement.style.backgroundColor = "red";
+
+// parentnodes jo hai wo kuch na kuch return zarur krta hai jb html ka parent element find krengay tou null ayega lekin jb parentnode find krengay tou document ayega ..
+
+// a = document.parentNode; iska lekin null hi return hoga 
+
+// parent k reference se children ko maloom krna ya set krna --->
+
+// a = document.getElementById("outer").children;
+// outer k 2 children hain h2 jo hamari heading thi aur inner 
+
+// a = document.getElementById("inner").children[0]
+// document.getElementById("inner").children[0].style.background = "red";
+// iske 5 children hain 4 block aur aik h2 array return krega
+// yun set bhi hojata hai 
+
+// childnode aur children me farq yeh hai k childnode texts ko bhi consider krta hai aur comments ko bhi 
+
+// a = document.getElementById("outer").childNodes.inneHTML;
+// ab isne text ko bhi return krdia 
+
+
+// firstchild and lastchild --> yeh comments space etc sbko consider krleta hai 
+
+// a = document.getElementById("inner").firstElementChild.style.color = "pink";  color ko pink per set kr dia hai firstelementchild k
+// h2 return kar rha hai cause h2 first child hai inner div ka 
+
+// issi trh lastelementchild ka bhi yehi hoga
+
+// a = document.getElementById("inner").lastElementChild;
+// div d hai last child 
+
+// a = document.getElementById("inner").firstChild;
+// yeh tags k elawa bhi jo cheezain aarhi hotin hain unhe bhi consider krleta hai isliay yahan text aarha hai 
+
+// a = document.getElementById("inner").lastChild;
+// same case
+
+
+// previoussibling nextsibling
+
+
+// a = document.getElementById("id-C").nextElementSibling.style.background = "black";
+// d return kia 
+
+// a = document.getElementById("id-C").previousElementSibling.style.background = "brown";
+// b return kia aur ussi ko set kia 
+// element walay tags ko hi target krte hain bss lekin iske bagair walay har cheez ko target krlete hain 
+
+
+// a = document.getElementById("id-C").previousSibling;
+// yeh \n return kr rha hai yani isne har cheez ko cinsider krlia hai 
+
+// a = document.getElementById("id-C").nextSibling;
+// same case
+
+
+
+
+
+
+
+
+
+
+
+
+
+   console.log(a);
+
+
+</script>
+</html>

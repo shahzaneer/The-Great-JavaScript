@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resizeby resizeto window method </title>
+</head>
+<body>
+    <!-- without drag and drop resize krne k liay  -->
+    <h1>resizeby resizeto window method</h1>
+    <button onclick="openWindow()">open window</button>
+    <button onclick="closeWindow()"> Close Window</button>
+    <button onclick="moveWindow()">MoveWindow</button>
+    <button onclick="resizeWindow()">Resize window</button>
+    <button onclick="resizeByWindow()">resizeByWindow()</button>
+
+    <script>
+        var myWindow;
+        
+
+        function openWindow(){
+
+           myWindow = window.open("","","width=200px,height=200px,top=100px,left=100px");
+           myWindow.document.write("this is shahzaneer ahmed");
+             }
+
+        function closeWindow(){
+
+            myWindow.close();
+        }
+
+        function moveWindow(){
+
+     
+            myWindow.focus();
+            
+            myWindow.moveBy(200,200);
+            
+
+        }
+        function resizeWindow(){
+            myWindow.resizeTo(400,400);
+            // pehla arg width dusra height hai 
+            // 400x400 ka bana dega simple
+        }
+
+        function resizeByWindow(){
+            myWindow.resizeBy(100,100);
+            // yeh resize krta hai relatively jitni pehle hogi usme yeh value add hojayegi yahan 200 pehle thi 100 di tou 300px hojayegi 300x300;
+        }
+
+    </script>
+    
+</body>
+</html>

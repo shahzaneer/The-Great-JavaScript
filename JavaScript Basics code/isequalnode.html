@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>is equalnodes DOM</title>
+</head>
+<body>
+    <h1>is equalnodes DOM</h1>
+
+    <ul id="list1">
+        <li class="orange1">Orange</li>
+        <li>Banana</li>
+        <li>Apple</li>
+        <li>Grapes</li>
+    </ul>
+
+    <ul id="list2">
+        <li>Guava</li>
+        <li class="orange2">Orange</li>
+        <li>PineApple</li>
+    </ul>
+    <script>
+        var target1 = document.getElementById("list1").firstElementChild;
+        // var target2 = document.getElementById("list2").firstElementChild;
+
+
+
+        // var equal = target1.isEqualNode(target2);
+        // false return hoga cause change hain list 1 aur lisrt 2 k first elements 
+
+        var target2 = document.getElementById("list2").firstElementChild.nextElementSibling;
+        var equal = target1.isEqualNode(target2);
+        // ab true return hoga kyunkay pehla aur dusra same hain dono lists ka 
+        // console.log(equal);
+
+
+        // isme khayal rkhna hai k true srff tab return hoga jb dono exactly same hon unke atrributes unki value unke text unka tag unka aik aik cheez even spaces bhi abhi ager hum class change krden tou bhi false ayega
+        
+        console.log(equal);
+        // false kyunkay ab class change hogyi hai 
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

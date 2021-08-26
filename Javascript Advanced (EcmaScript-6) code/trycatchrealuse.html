@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch real use</title>
+    <script>
+        try{
+           let json = '{"name:"Shahzaneer ahmed","age":19}';
+
+           let user = JSON.parse(json);
+        //    parse json k data ko object me convert krta hai 
+
+        // stringyfy js k object ko json me convert krta hai
+        console.log(user.name);
+        console.log(user.age);
+
+
+        }
+        catch(error){
+            console.log(error);
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Try catch real use</h1>
+
+
+</body>
+</html>

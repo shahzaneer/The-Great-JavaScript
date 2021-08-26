@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove Child replace child DOM Methods</title>
+    <style>
+        #s{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>remove Child replace child DOM Methods</h1>
+
+    <ul id="s">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Plum</li>
+        <li>Banana</li>
+    </ul>
+
+    <script>
+        // var newElement = document.createElement("li");
+        // // li banaya
+
+        // var newText = document.createTextNode("Pomegranate");
+        // // text banaya
+
+        // newElement.appendChild(newText);
+        // // link kia 
+
+        target = document.getElementById("s");
+
+        var oldElement = target.children[1];
+
+        // console.log(oldElement);
+
+        // target.replaceChild(newElement,oldElement);
+        // iska pehle arg hai jo new value add krni ho aur dusra hai jo remove krni ho ;
+
+
+
+
+        // removeChild
+
+        target.removeChild(oldElement );
+        // jisko remove krna houta hai srff uski ko arg me dete hain 
+
+
+
+
+
+
+    </script>
+</body>
+</html>

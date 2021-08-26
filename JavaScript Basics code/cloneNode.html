@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM cloneNode Method</title>
+
+    
+</head>
+<body>
+    <h1>DOM cloneNode Method</h1>
+
+    <ul id="sc">
+        <li class="abc">Orange</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+        <li>Apple</li>
+    </ul>
+
+
+    <ul id="sc2">
+        <li>Carrot</li>
+        <li>Reddish</li>
+    </ul>
+    <script>
+    var target = document.getElementById("sc").children[0];
+    
+    
+    var copyElement = target.cloneNode(true);
+    // yeh aik arg leta hai jo bool dete hain by default false houta hai 
+    // false dene per yeh mehiz tag copy krta hai inner material nhi krta copy yeh class/id bhi copy krleta hai lekin ander ka text copy nhi krta true krne per aisa hopayega 
+        
+
+    console.log(copyElement);
+
+    document.getElementById("sc2").appendChild(copyElement);
+    // sc2 me list2 me humne append krdia copy element ko 
+
+    // issi trh hum kisi me bhi clone kerskte hain not necesaary in unorderedlists etc 
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

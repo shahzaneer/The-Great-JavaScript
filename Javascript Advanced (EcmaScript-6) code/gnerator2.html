@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator 2</title>
+    <script>
+        function *generator(){
+            yield 55;
+            yield* ["node","angular","react"]
+            // array yield ki hai 
+            // array k  yield k saath * lga den tou yeh do array ki saari value alag alag consider hongi 
+        }
+
+        let g = generator();
+
+        console.log(g.next());
+        console.log(g.next());
+        // node return krega 
+        console.log(g.next());
+        console.log(g.next());
+    </script>
+</head>
+<body>
+    <h1>generator 2 </h1>
+</body>
+</html>

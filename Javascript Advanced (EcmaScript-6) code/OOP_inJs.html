@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object oriented programming in Js</title>
+    <script>
+        class hello{
+            message(){
+                console.log("Hello Everyone");
+            }
+            sorry(){
+                console.log("Sorry Everyone");
+            }
+        }
+        let a = new hello();
+        // a aik object hai jo actual chez hai class aik blueprint hai mehizz
+
+
+        a.message();
+        a.sorry();
+
+
+        // constructor , prototype , static methods--
+        class student{
+            constructor(name1,age1){
+                // yun aik constructor function bnta hai
+                console.log("Im constructor function")
+                // properties yani class k variables ko yahan hi define krna hoga 
+                this.name = name1; 
+                this.age = age1;
+
+            }
+            hello(){
+                // yey prototype method hai
+                console.log("Hello " +this.name +"your age is " + this.age);
+                // this keyword btata hai k jo bhi yahan ayega wo le
+            }
+
+            static sorry(){
+                console.log("I m static method  i am not called by object im not a function (prototype) i can be called by the reference of class name");
+            }
+        }
+        let b = new student("Shahzaneer ahmedi !" ,19);
+        // constructor object bnaate hi auto call hojata hai isi liay constructor function ko bulanay ki zarurat nhi parti jitni baar call krengay utni baar call hoga 
+        // b.name = "Shahzaneer Ahmed";
+
+        // properties ko class k arguments k tor per pass krna hai
+
+        b.hello();
+        // class  k mutiple objects bana skte hain 
+
+        let d = new  student("Rameez kumar" , 19);
+        d.hello();
+
+        student.sorry();sss
+
+
+    </script>
+</head>
+<body>
+    <h1>Object oriented programming in Js</h1>
+    
+
+</body>
+</html>

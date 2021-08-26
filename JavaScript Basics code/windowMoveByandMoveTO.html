@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moveto moveby window methods</title>
+</head>
+<body>
+    <h1>moveto moveby window methods</h1>
+    <button onclick="openWindow()">open window</button>
+    <button onclick="closeWindow()"> Close Window</button>
+    <button onclick="moveWindow()">MoveWindow</button>
+    <!-- isme left aur top nhi dia hua tou yeh top left corner se khulegi isko move krne k liay hum moveby moveto k methods use kerte hain (window) -->
+
+
+    <script>
+        var myWindow;
+        
+
+        function openWindow(){
+
+           myWindow = window.open("","","width=500px,height=250px,top=100px,left=100px");
+           myWindow.document.write("this is shahzaneer ahmed");
+             }
+
+        function closeWindow(){
+
+            myWindow.close();
+        }
+
+        function moveWindow(){
+
+            // myWindow.moveTo(100,100);
+            // isme pehla arg jo hai left se margin hai aur dusra top se ..yeh absolute hota hai 
+            myWindow.focus();
+            // focus krne se new window khulegi  wo focus hogi
+            // default value set bhi krdi jaye tou baad me usse bhi move kia jaskta hai  
+
+            myWindow.moveBy(200,200);
+            // yeh chunkay relative k hisaab se hai tou is liay zyada door gya hai k isne by default ki value ko bhi consider kia hai 
+
+
+        }
+
+    </script>
+</body>
+</html>

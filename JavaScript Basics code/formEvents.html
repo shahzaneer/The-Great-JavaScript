@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form events</title>
+    
+</head>
+<body>
+    <!-- focus ka mtlb hai jb apne click kia hua ho ... aur blur ka mtlb hai jb ap wapis normal state me jao  -->
+    <form action="" onsubmit="submitfunc()">
+        <legend>Sign up</legend><br><br>
+        <label for="">Name</label> <input type="text" id="fname" onfocus="focusfunction(this)" onblur="blurfunc(this)"  onchange="changefunc(this)"  oninvalid="alert('please fill the first name')" required>
+        <!-- jese hi invalid hoga kuch tou oninvalid trigger hojayega  -->
+        <!-- oninput="inputfunc(this)" -->
+        <!-- onfocus ho tou focus function ko call krdena  -->
+        <!--  -->
+        <br><br>
+        <label for="">Class</label> <input type="text" name="" id="" onfocus="focusfunction(this)" onblur="blurfunc(this)" onselect="selectfunc(this)">
+        <br><br>
+        <label for="">Country</label> <select name="" id="" onfocus="focusfunction(this)" onblur="blurfunc(this)" onchange="changefunc()">
+            <option value="ind">India</option>
+            <option value="pak">Pakistan</option>
+            <option value="ban">Bangladesh</option>
+            <option value="sl">Sri Lanka</option>
+            <!-- user ko dhikhayee india derha hai lekin hm jo value use kr rhay hain wo ind hai and vice versa -->
+
+
+        </select>
+
+        <input type="submit">
+        <br><br>
+
+
+
+
+    </form>
+    <div id="test" style="border:1px solid red ;"></div>
+    <script>
+       function focusfunction(element){
+           element.style.background = "lime";
+        //    element me reference mmojud hai us cheez ka jisko change krna hai apne 
+       } 
+       function blurfunc(elem){
+           elem.style.background = "white";
+       }
+
+       function inputfunc(element){ 
+            var x = element.value;
+            document.getElementById("test").innerHTML = x;
+       }
+       function changefunc(element){
+        var x = element.value;
+        document.getElementById("test").innerHTML = x;
+        // onchange --> tb trigger houta hai jb focus lost houta hai 
+       }
+       function selectfunc(){
+           console.log("you selected some text ");
+       }
+       function submitfunc(){
+           console.log("you submitted a form");
+        //    alert("you submit a form");
+           var x = document.getElementById("fname").value;
+           alert("hello " +x);
+
+       }
+
+    </script>
+</body>
+</html>

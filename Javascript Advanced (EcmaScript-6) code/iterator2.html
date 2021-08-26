@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterators 2</title>
+    <!-- string aur objects me bhi iterators use hoskte hain  -->
+    <script>
+        // let str = "Shahzaneer ahmed";
+        // let iter = str[Symbol.iterator]();
+
+        // iterating through while loop
+
+        // let result = iter.next();
+
+        // while(!result.done){
+        //     console.log(result.value);
+
+        //     result = iter.next();
+        // }
+
+        // iterating through for loop
+
+        // for (let char in str){
+        //     //  for in loop me pehla index houta hai aur of me character ho houta hai 
+        //     console.log(str[char]);
+        // }
+
+        // for (let char of str){
+            
+        //     console.log(char);
+        // }
+
+
+
+        // hum apna khud ka iterator bhi banaskte hain 
+        // yeh tareeka ecma script 6 se purana hai 
+        // aur wo hum yun krte thy 
+        let numbers = [100,200,300,400,500];
+
+        let num = numberIterator(numbers);
+
+
+        // ab yeh number iterator function banalete hain 
+        function numberIterator(arr){
+            var nextNum = 0
+            return {
+                next(){
+                    if(nextNum< arr.length){
+                        return{
+                            value : arr[nextNum++],
+                            done : false
+                        }
+
+                    }
+                    else{
+                        return{
+                            done : true
+                        }
+                    }
+                }
+            }
+
+        }
+
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+
+        // yun use krne se poora control iteration ka hamaray haatm me aajata hai yehi iterator ka main use hain rela life me 
+
+
+    </script>
+</head>
+<body>
+    <h1>Iterators 2 </h1>
+
+</body>
+</html>
