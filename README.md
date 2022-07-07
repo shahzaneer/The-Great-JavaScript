@@ -1,4 +1,3 @@
 # JavaScript
 Learning --> JavaScript  August  - Summer 21'
-This is my learning of js . it includes Theory and codes .
-If you're beginner it will surely help you .
+![javaScript](https://socialify.git.ci/shahzaneer/The-Great-JavaScipt//image?description=1&font=Raleway&forks=1&issues=1&language=1&name=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Dark)
