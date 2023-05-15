@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>console.log </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>console.log</title>
     <script>
-        console.time("time to run the page");
-        var a = 19;
-        console.log(a);
-        a+=1;
-        console.log(a);
+      console.time("time to run the page");
+      var a = 19;
+      console.log(a);
+      a += 1;
+      console.log(a);
 
-        console.log([1,2,3,4]);
-        console.table([1,2,3,4]);
-       // console.clear(); isse console clear hojata hai !
+      console.log([1, 2, 3, 4]);
+      console.table([1, 2, 3, 4]);
+      // console.clear(); isse console clear hojata hai !
 
-        console.error("Something went wrong kiddo");
-        console.warn("THIS IS A warning kiddo! ");
-        console.timeEnd('time to run the page');
-        
+      console.error("Something went wrong kiddo");
+      console.warn("THIS IS A warning kiddo! ");
+      console.timeEnd("time to run the page");
+
+      console.time("timeTaken");
+      // yeh dono pair main use hote hain aur argument same hona chahiay
+      // in dono statements k darmiyaan time calculate hoga k kitna time main inke darmiyan
+      // wali statements execute hui hain
+      // Performance guage krne k liay use hoti hain yeh commands
+
+      for (var i = 0; i < 10000; i++) {
+        document.write("Shahzaneer Ahmed unit " + i);
+      }
+      console.timeEnd("timeTaken");
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
