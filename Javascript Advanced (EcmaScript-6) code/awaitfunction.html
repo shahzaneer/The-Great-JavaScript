@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>await function</title>
     <script>
-    //     async function test(){
-    //         console.log("2: message")
-    //         await console.log("3: message")
-    //         console.log("4: message")
-    //         // async function me jis statement  k saath lagaya jaata hai await wo statement execute hojati hai aur uske bad async func me jo kuch hai wo wait krta hai func se bahir jaaker saari statement execute hoti hain aur phir wapis aata hai await likhi hui statement per ager wo completely execute hogyi ho tou jo asyn func me statements rehti hain execute hojati hain
-    //     }
+        // async function test(){
+        //     console.log("2: message")
+        //     await console.log("3: message")
+        //     console.log("4: message")
+        //     // async function me jis statement  k saath lagaya jaata hai await wo statement execute hojati hai aur uske bad async func me jo kuch hai wo wait krta hai func se bahir jaaker saari statement execute hoti hain aur phir wapis aata hai await likhi hui statement per ager wo completely execute hogyi ho tou jo asyn func me statements rehti hain execute hojati hain
+        //}
 
     //    console.log("1: message");
     //    test();
@@ -37,25 +37,25 @@
     // console.log(a);
 
 
-    async function test(){
-        console.log("2: message");
-        const response = await fetch("json/student.json");
-        console.log("3: message");
+    // async function test(){
+    //     console.log("2: message");
+    //     const response = await fetch("json/student.json");
+    //     console.log("3: message");
 
-        const students = await response.json();
+    //     const students = await response.json();
 
-        return students;
+    //     return students;
 
-        // isko aik line me bhi convert kia jaskta hai 
+    //     // isko aik line me bhi convert kia jaskta hai 
 
-        // return (await fetch("json/student.json")).json();
-    }
+    //     // return (await fetch("json/student.json")).json();
+    // }
 
-    test().then((response) => {
-        console.log(response)
-    }).catch((error) =>{
-        console.log(error)
-    })
+    // test().then((response) => {
+    //     console.log(response)
+    // }).catch((error) =>{
+    //     console.log(error)
+    // })
 
 
     </script>

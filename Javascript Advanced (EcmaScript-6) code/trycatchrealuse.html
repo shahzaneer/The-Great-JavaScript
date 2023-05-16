@@ -7,14 +7,15 @@
     <title>Try catch real use</title>
     <script>
         try{
-           let json = '{"name:"Shahzaneer ahmed","age":19}';
+           let json = '{"name":"Shahzaneer ahmed","age":19}';
 
            let user = JSON.parse(json);
         //    parse json k data ko object me convert krta hai 
 
-        // stringyfy js k object ko json me convert krta hai
-        console.log(user.name);
-        console.log(user.age);
+        // stringyfy js k object ko String of json  me convert krta hai
+        console.log(typeof (JSON.stringify(user)));
+        console.log(user["name"]);
+        console.log(user["age"]);
 
 
         }

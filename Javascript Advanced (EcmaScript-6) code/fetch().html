@@ -1,72 +1,64 @@
-<!-- ajax ko implement krne k two ways thy aik jquery k through aur xmlhttprequest k through pehlay ka disadvantage yeh hai k isse use krne k liay hamain 100kb ki file attach krna prti hai jisse server per load brhta hai jbke dusrY way me kaafi code likhna perta hai Fetch method dono se behtar hai jo ecma script 6 me aaya hai  -->
+<!-- ajax ko implement krne k two ways thy aik jquery
+k through aur xmlhttprequest k through pehlay ka
+disadvantage yeh hai k isse use krne k liay hamain 
+100kb ki file attach krna prti hai jisse server 
+per load brhta hai jbke dusrY way me kaafi code 
+likhna perta hai Fetch method dono se behtar hai
+jo ecma script 6 me aaya hai  -->
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>fetch method</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // fetch("txtfile/readme.txt")
-        // .then((response)=>{
-        //     // console.log(response.text());
-        //     return response.text();
-        // })
-        // .then((data)=>{
-        //     // console.log(data);
-        //     document.write(data);
-        // });
+      // fetch("txtfile/readme.txt")
+      // .then((response)=>{
+      //     // console.log(response.text());
+      //     return response.text();
+      // })
+      // .then((data)=>{
+      //     // console.log(data);
+      //     document.write(data);
+      // });
 
-        // writing with proper arrow functions 
+      // writing with proper arrow functions
 
-        // fetch("txtfile/readme.txt")
-        // .then(response => response.text())
-        // .then(data => document.write(data));
+      fetch("txtfile/readme.txt")
+      .then(response => response.text())
+      .then(data => document.write(data));
 
-        // writing for fetching fake json data jisse jsonholder naami site se lia hai 
+      // writing for fetching fake json data jisse jsonholder naami site se lia hai
 
-        // fetch("https://jsonplaceholder.typicode.com/posts")
-        // .then(response => response.json())
-        // .then(data => console.log(data))
-        
-        
-        // 100 posts wala json data copy kia wo server se leker site per show kia hai  
-        // kbhi kbhaar error bhi aajatay hain jinkay liay hamain catch method bhi banana perta hai jo uper banaya hai 
-        // catch ko use krne k liay men fetch me dia gya path khraab krdeta hun takay error aye aur catch ka paath chalay
+      // fetch("https://jsonplaceholder.typicode.com/posts")
+      // .then(response => response.json())
+      // .then(data => console.log(data))
 
-        // fetch("https://jsonplaceholder.typicode.com/1")
-        // .then(response => response.json1())
-        // .then(data => console.log(data))
-        // .catch((error) => document.write("Can't find error"));
+      // 100 posts wala json data copy kia wo server se leker site per show kia hai
+      // kbhi kbhaar error bhi aajatay hain jinkay liay hamain catch method bhi banana perta hai jo uper banaya hai
+      // catch ko use krne k liay men fetch me dia gya path khraab krdeta hun takay error aye aur catch ka paath chalay
 
-        // json ka jo data hai usse alag alag print krna
+      // fetch("https://jsonplaceholder.typicode.com/1")
+      // .then(response => response.json1())
+      // .then(data => console.log(data))
+      // .catch((error) => document.write("Can't find error"));
 
-        fetch("json/student.json")
-        .then(response => response.json())
-        .then(data => { console.log(data);
-            for (var x in data){
-                a = `${data[x].name} - ${data[x].age} - ${data[x].city} <br>`
-                document.write(a)
-            }
-        
-        })
-        
+      // json ka jo data hai usse alag alag print krna
 
-
-
-
-
-
-
-
-
-
+      fetch("json/student.json")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          for (var x in data) {
+            a = `${data[x].name} - ${data[x].age} - ${data[x].city} <br>`;
+            document.write(a);
+          }
+        });
     </script>
     <h1>fetch method</h1>
-    
-</body>
+  </body>
 </html>
